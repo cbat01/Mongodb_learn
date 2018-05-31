@@ -4,6 +4,14 @@
 >db.表名.find()         //表内容查询
 
 >db.student.insert({"username":"xiaohong"},{"age":11},{"sex":"女"})   //数据添加
->db.student.find({"age":20})    //数据查询
+>for(i=3;i<100;i++)db.imooc_collection.insert({x:i})   //for循环添加多条数据
+WriteResult({ "nInserted" : 1 })
+
+
+>db.student.find({"age":20})        //数据查询
+>db.imooc_collection.find().count() //查询有多少条数据
+>db.imooc_collection.find().skip(3).limited(2).sort({x:1})   //过滤前三条数据，限制返回两条数据，使用x排序
+
+
 
 >db.student.fint({"age":20}).pretty()    //数据查询完，逐行显示，不挤在一行
