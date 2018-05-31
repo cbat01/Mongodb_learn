@@ -1,0 +1,5 @@
+表数据的删除
+
+>db.表明.remove()     //表数据删除
+
+> db.student.remove({"name":"cbat"})
