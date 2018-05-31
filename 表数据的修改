@@ -1,0 +1,7 @@
+表数据的修改
+
+> db.表名.update({"username":"cbat"},{$set:{"username":"newcbat"}})
+> db.student.update({"username":"xiaomi"},{$set:{"username":"dami"}})
+
+修改完查看结果
+> db.表名.find()
