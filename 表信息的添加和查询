@@ -1,0 +1,9 @@
+表的添加和查询
+
+>db.表名.insert(json)   //表内容添加
+>db.表名.find()         //表内容查询
+
+>db.student.insert({"username":"xiaohong"},{"age":11},{"sex":"女"})   //数据添加
+>db.student.find({"age":20})    //数据查询
+
+>db.student.fint({"age":20}).pretty()    //数据查询完，逐行显示，不挤在一行
