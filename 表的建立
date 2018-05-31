@@ -1,0 +1,16 @@
+表的建立
+
+D:\MongoDB\bin>mongo
+> use students                    //创建数据库
+switched to db students
+> show collections              //显示表（还没创建所以为空）
+>
+> db.student.insert({"username":"cbat"})          //创建student表同时插入数据
+WriteResult({ "nInserted" : 1 })
+> db.student.insert({"username":"xiaoming","age":"20"})     //插入数据
+WriteResult({ "nInserted" : 1 })
+> db.student.insert({"username":"laowang","age":"22","sex":"男"})    //插入数据
+WriteResult({ "nInserted" : 1 })
+> show collections                   //显示表
+student
+>
