@@ -1,0 +1,26 @@
+//数据的更新
+
+db.表名.update({被改数据},{修改后数据})  
+
+//修改前
+> db.student.find()
+{ "_id" : ObjectId("5b0faf455234f9eacd1b02ce"), "username" : "cbat01" }
+
+
+//修改
+> db.student.update({"username":"cbat01"},{"username":"update_cbat01"})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+//修改后
+> db.student.find()
+{ "_id" : ObjectId("5b0faf455234f9eacd1b02ce"), "username" : "update_cbat01" }
+
+
+//////////////////////////////////////////////////////
+一条数据含多个内容，只更新其中一个时
+
+db.表名.update({条件},{$set:{修改后的数据}})
+
+
+>db.imooc.insert({x:100,y:100,z:100})    
+>db.imooc.update({z:100},{$set:{y:99}})  //以z为条件，x、z不变，将y更新为99
